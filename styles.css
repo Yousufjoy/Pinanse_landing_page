@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* navbar starts */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  /* background: rgb(19, 253, 116); */
+}
+
+.brand-title {
+  font-size: 2.6rem;
+  margin: 0.5rem;
+  font-weight: bold;
+  color: #2f3859;
+}
+
+.navbar-links ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style-type: none;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  color: rgb(0, 0, 0);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    background-color: #f6f6f6;
+  }
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .download {
+    display: flex;
+    flex-direction: column;
+  }
+  .download .download-image {
+    display: none;
+  }
+}
+
+/* navbar ends */
+
+/* Hero section starts */
+
+.Parent {
+  display: flex;
+  flex-direction: row;
+}
+
+.child-left {
+  width: 40%;
+  color: #acaf0d;
+  height: 50vh;
+  background: rgb(255, 255, 255);
+  /* text-align: center; */
+  margin-top: 250px;
+}
+
+.child-right {
+  width: 50%;
+  height: 40vh;
+  margin-top: 130px;
+  color: white;
+  /* text-align: center; */
+}
+
+.sub-heading {
+  color: rgb(0, 0, 0);
+}
+.main-heading {
+  font-size: 2.5rem;
+  letter-spacing: normal;
+  color: #2f3859;
+}
+
+.button {
+  margin-top: 20px;
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #2f3859;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 14px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: #727a25;
+  box-shadow: rgba(255, 255, 255, 0.05) 0 5px 30px,
+    rgba(255, 255, 255, 0.05) 0 1px 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.35s;
+}
+
+.button:hover:after {
+  opacity: 0.5;
+}
+
+.button:active {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 3px 6px 0, rgba(0, 0, 0, 0.1) 0 0 10px 0,
+    rgba(0, 0, 0, 0.1) 0 1px 4px -1px;
+  transform: translateY(2px);
+  transition-duration: 0.35s;
+}
+
+.button:active:after {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 14px 22px;
+    width: 176px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Parent {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+/* Feature starts  */
+.feature {
+  height: 600px;
+  margin-top: 150px;
+}
+
+.feature-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: normal;
+  color: #2f3859;
+  font-weight: bold;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-left: 60px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.f-heading {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.f-sub-heading {
+  padding-top: 20px;
+}
+
+/* Feature ENDS  */
+
+/* DOWNLOAD SECTION STARTS */
+.download {
+  height: 600px;
+  display: flex;
+  background-color: #2f3859;
+
+  border-radius: 10px 5%;
+  box-shadow: 3px 3px 6px 5px #ccc;
+}
+
+.download-image {
+  margin-top: 60px;
+}
+
+.download-left {
+  margin-top: 250px;
+  margin-left: 80px;
+}
+
+.download-heading {
+  font-size: 2rem;
+  letter-spacing: normal;
+  color: #ffffff;
+  font-weight: bold;
+  max-width: 600px;
+}
+
+/* GOOGLE PLAY BUTTON STARTS*/
+
+@font-face {
+  font-family: "fontfutura";
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+a.btn-google {
+  color: #fff;
+}
+.btn {
+  padding: 10px 16px;
+  margin-top: 50px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:active:focus,
+.btn:focus {
+  outline: 0;
+}
+.btn:focus,
+.btn:hover {
+  color: #333;
+  text-decoration: none;
+  outline: 0;
+}
+.btn:active {
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-google {
+  color: #fff;
+  background-color: #111;
+  border-color: #000;
+  padding: 15px 16px 5px 40px;
+  position: relative;
+  font-family: fontfutura;
+  font-weight: 600;
+}
+.btn-google:focus {
+  color: #fff;
+  background-color: #555;
+  border-color: #000;
+}
+.btn-google:active,
+.btn-google:hover {
+  color: #fff;
+  background-color: #555;
+  border-color: #000;
+}
+.btn-google:before {
+  content: "";
+  background-image: url(https://4.bp.blogspot.com/-52U3eP2JDM4/WSkIT1vbUxI/AAAAAAAArQA/iF1BeARv2To-2FGQU7V6UbNPivuv_lccACLcB/s30/nexus2cee_ic_launcher_play_store_new-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  margin-top: -15px;
+}
+.btn-google:after {
+  content: "GET IT ON";
+  position: absolute;
+  top: 5px;
+  left: 40px;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+/* GOOGLE PLAY BUTTON ENDS */
+
+/* DOWNLOAD SECTION ENDS */
+
+/* PRICING SECTION STARTS */
+/* PRICING SECTION ENDS */
